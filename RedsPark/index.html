@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!--<link rel="stylesheet" href="assets/css/style.css"> -->
+    <title>My Landscapes</title>
+</head>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+      $(".time").pDatepicker();
+    });
+  </script>
+
+<style>
+    
+    *{
+
+        
+    }
+    
+    body{
+        
+        height: 100%;
+        margin: auto;
+        width: 100%;
+        
+        
+    }
+
+    .heading{
+        margin: 72px;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+    }
+
+    .spinner{
+        background-image: url(static/vinyrd2.jpeg);
+        padding: 80px;
+        position: relative;
+        top: -72px;
+        margin-bottom: -72px;
+    }
+
+    .slide-container{
+        height: 140px;
+        width: 90px;
+        margin: 200px auto;
+        perspective: 1000px;
+        position: relative;
+        
+        
+    
+
+    }
+
+    .slide-container:hover .slides{
+        animation-play-state: paused;
+    }
+
+    .slide-container > img:hover{
+        transition:all .2s ease-in;
+        cursor: pointer;
+        box-shadow: 0px 0px 10px white;
+        bottom: 20px;
+        -webkit-box-reflect: below 25px linear-gradient(0deg, white) 0%, transparent 20%;
+        
+    }
+
+    .slides{
+        height: 180%;
+        width: 130%;
+        display: flex;
+        justify-content: center;
+        transform-style: preserve-3d;
+        animation: animate 10s linear infinite;
+        
+
+    }
+
+    @keyframes animate {
+        from{
+            transform: rotateY(0deg);
+        }
+        to{
+            transform: rotateY(360deg);
+        }
+    }
+
+    .slides > img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        image-rendering: auto;
+        position: absolute;
+        /*box-shadow: 0px 0px 5px gray;*/
+    }
+
+    .slides > img:nth-child(1){
+        transform: rotateY(45deg) translateZ(270px);
+        border: none;
+    }
+
+    .slides > img:nth-child(2){
+        transform: rotateY(90deg) translateZ(270px);
+        border:none;
+    }
+
+    .slides > img:nth-child(3){
+        transform: rotateY(135deg) translateZ(270px);
+        border:none;
+    }
+
+    .slides > img:nth-child(4){
+        transform: rotateY(180deg) translateZ(270px);
+        border:none;
+    }
+
+    .slides > img:nth-child(5){
+        transform: rotateY(225deg) translateZ(270px);
+        border:none;
+    }
+
+    .slides > img:nth-child(6){
+        transform: rotateY(270deg) translateZ(270px);
+        border:none;
+    }
+
+    .slides > img:nth-child(7){
+        transform: rotateY(315deg) translateZ(270px);
+        border:none;
+    }
+
+    .slides > img:nth-child(8){
+        transform: rotateY(360deg) translateZ(270px);
+        border:none;
+    }
+
+    .navbar-brand{
+        text-align: center;
+    }
+
+    .images{
+        display: flex;
+    }
+
+    .map{
+        /*margin-left: 159%;*/
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        background: transparent;
+        bottom: 0;
+        color: transparent;
+        cursor: pointer;
+        height: auto;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: auto;
+    }
+
+    .reserve{
+        color: black;
+    }
+
+    .choose-time{
+        color: black;
+    }
+
+    .text-white{
+        display: flex;
+        justify-content: center;
+    }
+
+    .calendar{
+        display: flex;
+        justify-content: center;
+        margin: 27px;
+    }
+
+</style>
+
+<body>
+
+    <!--Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+        <div class="container">
+            <a href="#" class="navbar-brand">RedsPark</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#gallery" class="nav-link">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#locations" class="nav-link">Locations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#reserve" class="nav-link">Reserve Now</a>
+                    </li>
+                </ul>
+
+            </div>
+    </nav> 
+
+
+     <!-- Main Section -->
+    <section class="bg-dark text-light p-10 p-lg-0 pt-lg-10 p-md-10 p3 mb-5">
+        <div class="heading container p-5 bg-dark justify-content-center">
+            
+
+            <h1 class="text-center text-white row-lg-2 row-md-6 pe-sm-5">Welcome To Our Red Wines Park! Pick A Wine.</h1>
+        </div>        
+    </section>
+
+    <section class="spinner">
+        <div class="slide-container">
+            <div class="slides">
+                <img src="static/cabsav.png">
+                <img src="static/grenache.png">
+                <img src="static/mer4.png">
+                <img src="static/mlbec.png">
+                <img src="static/pin3.png">
+                <img src="static/zif3.png">
+                <img src="static/syrah1.png">
+                <img src="static/sang1.png">
+            </div>
+        </div>
+    </section>
+
+        
+
+    <section id="gallery" class="gallery bg-dark p-10 p-lg-0 lg-10 text-center text-sm-start shadow-lg">
+            <h2 class="text-center p-5 text-white">See Our Gallery</h2>
+            <div class="images row g-4 p-4">
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <img src="static/rpgal1.jpeg" alt="Fishing Boat" class="" width="280" 
+                        height="210">
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <img src="static/rpgal2.jpeg" alt="Lights" class="" width="280" 
+                        height="210">
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <img src="static/rpgal3.jpeg" alt="Backcountry River" class="" width="280" 
+                        height="210">
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-1">
+                        <img src="static/rpgal4.jpeg" alt="Autumn Leaves" class="" width="280" 
+                        height="210">
+                    </div>
+                    
+            </div>
+    </section>
+
+
+    <section class="form text-white">
+        <div class="">
+            <h1 class="reserve" id="reserve">Reserve Your Table Today</h1>
+        </div>
+    </section>
+
+    <section>
+        <div class="calendar">
+            <form action="/action_page.php">
+            <label for="choose-time"><h3 class="choose-time">Select Date & Time:</h3></label><br>
+            <input type="datetime-local" id="choose-time" name="choose-time">
+            <input type="submit">
+            </form>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="scrollable2 bg-dark">
+            <div class="row g-4 p-4">
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <img src="static/chicago map screenshot.png" alt="Crab Pots" class="map" width="280" 
+                        height="210">
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Section-->
+    <section id="locations" class="bg-dark text-light text-center p-5">
+        <h5>All photographs taken in Chicago. Contact us for hours of operations to our Vineyard Park</h5>
+    </section>
+
+
+
+    <footer>
+        <p class="lead text-center p-3">&copy; 2024 Camille Haile</p>
+    </footer>
+
+        
+    
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
